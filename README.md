@@ -12,7 +12,7 @@
 
 ![abc](https://drive.google.com/file/d/1g6m4o-tf1oL3e1JHjYGkOB86fuyqDRsX/view?usp=sharing "abc")
 
-![](https://img.shields.io/badge/release-1.0.0-blue) ![](https://img.shields.io/badge/java-1.7-green) ![](https://img.shields.io/badge/spring%20boot-2.1.6-red) ![](https://img.shields.io/spring%20security-2.1.6-blue) ![](https://img.shields.io/hibernate-4.3.1-orange)
+![](https://img.shields.io/badge/release-1.0.0-blue) ![](https://img.shields.io/badge/java-1.7-green) (https://img.shields.io/badge/spring%20boot-2.1.6-red) ![](https://img.shields.io/spring%20security-2.1.6-blue) ![](https://img.shields.io/hibernate-4.3.1-orange)
 
 
 **Table of Contents**
