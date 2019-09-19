@@ -28,7 +28,28 @@
 ## Web Services
 
 ### customization/create
-
+- Request Method - POST
+- Consumes - JSON
+```
+{
+  "appName":"Madeena VPN",
+  "appContext":"madeenavpn",
+  "primaryIPAddress":"182.12.21.12",
+  "secondaryIPAddress":"123.23.23.21",
+  "httpPort":8084,
+  "sshPort":22,
+  "isServerCreationFlag":true
+}
+```
+- Produces - JSON
+```
+{
+  "errorCode": `error code`,
+  "errorCause": `error message to be displayed`,
+  "Result": null
+}
+```
+- Logic - If the request data is valid and the customization doesn't already exist, it creates an instance of the customization. If the *isServerCreationFlag* flag is ON, it makes an HTTP GET Request to the *VPN Manager Interceptor* to get the list of server instances mapped against this customization. The received server instances are added to the customization instance and is persisted into the database.
 ### customization/get/{id}
 
 ### customization/getAll
