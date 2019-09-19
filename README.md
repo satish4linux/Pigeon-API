@@ -8,13 +8,13 @@
 
 ![](https://img.shields.io/badge/version-1.0.0-blue) ![](https://img.shields.io/badge/java-1.7-green) ![](https://img.shields.io/badge/spring%20boot-2.1.6-orange) ![](https://img.shields.io/badge/spring%security-2.1.6-yellow) ![](https://img.shields.io/badge/hibernate-4.3.1-blue)
 
-##Architecture
+### Architecture
 
 ![](https://github.com/satish4linux/Pigeon-API/blob/master/Untitled%20Diagram.png)
 
-##Authorization
-###How To Use
-##Web Services
+### Authorization
+#### How To Use
+### Web Services
 ###H3 header
 ####H4 header
 #####H5 header
