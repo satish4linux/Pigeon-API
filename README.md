@@ -15,8 +15,8 @@
 ## Authorization
 
 - Each API exposed for consumption is secured by **Basic Authentication**
-- The Consumer system needs to provide it's valid *credentials* to consume the API.
-- If the consumer is authenticated, it depends upon consumer's *role* whether it is authorized to consume that API.
+- The Client needs to provide it's valid *credentials* to consume the API.
+- If the client is authenticated, it depends upon consumer's *role* whether it is authorized to consume that API.
 ### How To Use
 
 - The HTTP Request must contain an **Authorization** header as below:
