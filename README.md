@@ -10,7 +10,7 @@
 
 ## Architecture
 
-![](https://github.com/satish4linux/Pigeon-API/blob/master/Untitled%20Diagram.png)
+![VPN Manager Architecture](https://github.com/satish4linux/Pigeon-API/blob/master/Untitled%20Diagram.png)
 
 ## Authorization
 
