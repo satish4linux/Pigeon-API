@@ -62,7 +62,7 @@
   "Result": <customization instance>
 }
 ```
-- Logic - If the request data is valid and customizaiton exists, it returns the instance of the requested customization.
+- Logic - If the request data is valid and customization exists, it returns the instance of the requested customization.
 
 ### customization/getAll
 
@@ -136,10 +136,89 @@
 
 ### server/create
 
+- Request Method - POST
+- Consumes - JSON
+```
+{
+  "serverName":"Etisalat",
+  "serverKeyId":"321",
+  "serverProvider":"Microsoft Azure",
+  "primaryIPAddress":"182.21.23.12",
+  "secondaryIPAddress":"",
+  "port":821,
+  "sshPort":22
+}
+```
+- Produces - JSON
+```
+{
+  "errorCode": <error code>,
+  "errorCause": <error message to be displayed>,
+  "Result": null
+}
+```
+- Logic - If the request data is valid and the srever doesn't already exist, it creates an instance of the server. It makes a ping connection with the JAR apps deployed over the concerned OpenVPN Server to check it's status (ONLINE/OFFLINE). Then this instance is perssited in the database.
+
 ### server/get/{id}
+
+- Request Method - GET
+- Produces - JSON
+```
+{
+  "errorCode": <error code>,
+  "errorCause": <error message to be displayed>,
+  "Result": <server instance>
+}
+```
+- Logic - If the request data is valid and server exists, it returns the instance of the requested server.
 
 ### server/getAll
 
+- Request Method - GET
+- Produces - JSON
+```
+{
+  "errorCode": <error code>,
+  "errorCause": <error message to be displayed>,
+  "Result": <list of server instances>
+}
+```
+- Logic - It returns list of all the servers instance present in the database.
+
 ### server/delete/{serverId}
 
+- Request Method - GET
+- Produces - JSON
+```
+{
+  "errorCode": <error code>,
+  "errorCause": <error message to be displayed>,
+  "Result": null
+}
+```
+-Logic - If the request data is valid and the server exists, it removes the requested server from the database. Then it makes an HTTP POST Request to the *VPN Manager Interceptor* and sends the list of customizations mapped to this server, so that it's mapping can be removed from these customization applications.
+
 ### server/update
+
+- Request Method - POST
+- Consumes - JSON
+```
+{
+  "serverName":"Etisalat",
+  "serverKeyId":21,
+  "primaryIPAddress":"85.12.43.56",
+  "secondaryIPAddress":"",
+  "port":321,
+  "sshPort":22,
+  "serverProvider":"Azure"
+}
+```
+- Produces - JSON
+```
+{
+  "errorCode": <error code>,
+  "errorCause": <error message to be displayed>,
+  "Result": null
+}
+```
+- Logic - If the request data is valid and server exists, it updates the requested server. Then it makes an HTTP POST Request to *VPN Manager Interceptor* and sends the updated server instance in body so that all the customization applications mapped to this server are updated.
